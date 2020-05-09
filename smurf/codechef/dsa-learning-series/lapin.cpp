@@ -7,21 +7,23 @@ int main(){
     while(i--){
 	cin >> s;
 	if(s.length() % 2 == 0){
-	    s1 = sort(s.begin(), s + s.length()/2 - 1);
-	    s2 = sort(s + s.length()/2, s.end());
-	    if(s1 == s2){
+	    s1 = s.substr(0, s.length()/2);
+	    sort(s1.begin(), s1.end());
+	    s2 = s.substr(s.length()/2, s.length());
+	    sort(s2.begin(), s2.end());
+	    if(s1 == s2)
 		cout << "YES" << endl;
-	    } else {
+	    else
 		cout << "NO" << endl;
-	    }
 	} else {
-	    s1 = sort(s.begin(), s + s.length()/2 -1);
-	    s2 = sort(s+ s.length()/2 + 1, s.end());
-	    if(s1 == s2){
+	    s1 = s.substr(0, s.length()/2);
+	    sort(s1.begin(), s1.end());
+	    s2 = s.substr(s.length()/2 + 1, s.length());
+	    sort(s2.begin(), s2.end());
+	    if(s1 == s2)
 		cout << "YES" << endl;
-	    } else {
+	    else
 		cout << "NO" << endl;
-	    }
 	}
     }
     return 0;
