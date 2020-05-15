@@ -1,24 +1,25 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int i, j, n;
-    int inps[3][3];
-    int outs[3][3] = 1;
-    for(i = 0; i < 3; i++)
-	for(j = 0; j < n; j++){
-	    cin >> n;
-	    n%2==0?inps[i][j]=0:inps[i][j]=1;
+    int i, j, n, tot(0);
+    int inps[9];
+    for(i = 0; i < 9; i++){
+	cin >> inps[i];
+	if(inps[i]%2 == 0)
+	    inps[i] = 0;
+	else{
+	    inps[i] = 1;
+	    tot++;
 	}
     }
-    for(i = 0; i < 3; i++){
-	for(j = 0; j < 3; j++){
-	    if(inps[i][j] == 1){
-		outs[i][j]=abs(outs[i][j]-1);
-		outs[i+1][j] = abs(outs[i+1][j]-1);
-		outs[i-1][j] = abs(outs[i-1][j]-1);
-		outs[i+1
-	    }
-	}
-    }
-
-
+    ((inps[0]+inps[1]+inps[3]+inps[4])%2==0) ? cout << 1 : cout << 0;
+    ((tot-inps[6]-inps[7]-inps[8])%2==0) ? cout << 1 : cout << 0;
+    ((inps[1]+inps[2]+inps[4]+inps[5])%2==0) ? cout << 1 << endl : cout << 0 << endl;
+    ((tot-inps[2]-inps[5]-inps[8])%2==0) ? cout << 1 : cout << 0;
+    ((tot)%2==0) ? cout << 1 : cout << 0;
+    ((tot-inps[3]-inps[0]-inps[6])%2==0) ? cout << 1 << endl : cout << 0 << endl;
+    ((inps[3]+inps[4]+inps[6]+inps[7])%2==0) ? cout << 1 : cout << 0;
+    ((tot - inps[0]-inps[1]-inps[2])%2==0) ? cout << 1 : cout << 0;
+    ((inps[4]+inps[5]+inps[7]+inps[8])%2==0) ? cout << 1 << endl : cout << 0 << endl;
+    return 0;   
+}
