@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 int main(){
     int n, i, j, k, isum(0), jsum(0), ksum(0);
