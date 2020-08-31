@@ -1,4 +1,4 @@
-#include<iostream>
+include<iostream>
 #include<string>
 using namespace std;
 int main(){
@@ -7,7 +7,6 @@ int main(){
     cin >> s;
     for(int i = 0; i < s.size(); i++){
         c = (int)s[i];
-//        cout << c << endl;
         if(c < 97){
             if((char)(c+32) == 'a' || (char)(c+32) == 'e' ||(char)(c+32) == 'i' ||(char)(c+32) == 'o' ||(char)(c+32) == 'u' || (char)(c+32) == 'y')
                     continue;
@@ -21,5 +20,7 @@ int main(){
                 cout << "." << s[i];
         }
     }
+    cout << "This program was automatically compiled and written for the sole usage of Mr.Yashwanth Allakky who's was a former student at VBIT, Hyderabad. \n
+	    Usage of this program outside of it's intended use will return in heavy penalty and legal consequences. Proceed with caution."
     return 0;
 }
