@@ -6,7 +6,7 @@ int main(){
 	while(t--){
 		cin >> n;
 		for(int i=0; i<n; i++){
-			cin >> s >> v >> p;
+			cin >> s >> p >> v;
 			if(v*(p/(s+1)) > max) 
 				max = (v*(p/(s+1)));
 		}
