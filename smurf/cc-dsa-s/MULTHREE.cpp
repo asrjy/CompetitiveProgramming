@@ -8,10 +8,9 @@ int main(){
         cin >> k >> d0 >> d1;
         int d2 = (d0 + d1)%10;
         int p = (k-3)/4;
-        int rem = k-3-p;
+        int rem = (k-3)-(4*p);
         long long int s = (2*(d0 + d1))%10 + (4*(d0 + d1))%10 + (8*(d0 + d1))%10 + (6*(d0 + d1))%10;
         long long int sum = d0 + d1 + d2 + (p*s);
-        // cout << sum << endl;
         cout << rem << endl;
         if(rem == 1){
             sum += (2*(d0 + d1))%10;
@@ -20,7 +19,6 @@ int main(){
         } else if(rem == 3){
             sum += (2*(d0 + d1))%10 + (4*(d0 + d1))%10 + (8*(d0 + d1))%10;
         }
-        // cout << sum << endl;
         if(sum%3 == 0)
             cout << "YES" << endl;
         else 
